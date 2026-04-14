@@ -19,6 +19,8 @@ A step-by-step technical analysis of **DLL Hijacking** mechanisms and their limi
 ### Step 2: The ".local" (DotLocal) Redirection Attempt
 **Hypothesis:** If the application uses absolute paths to bypass the search order, can we force it to look into the local directory anyway? Using the **"DotLocal" (.local)** redirection hint—a legacy Windows feature—we created a directory named `powershell.exe.local` next to the executable.
 
+<img width="635" height="135" alt="image" src="https://github.com/user-attachments/assets/d7b2c252-d0bb-4ccf-9b66-82d34020968f" />
+
 * **Action:** Created the folder `powershell.exe.local` and placed the fake `amsi.dll` inside it, attempting to trigger the Windows Loader's redirection mechanism.
 * **Result:** **Failed (Mitigated).** Modern Windows components and DotLocal-aware applications ignore this redirection for core system components and processes loaded with hardened security flags.
 
