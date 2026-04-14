@@ -1,0 +1,13 @@
+﻿  FakeAMSI.cpp
+  dllmain.cpp
+  9 of 22 functions (40.9%) were compiled, the rest were copied from previous compilation.
+    8 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+FakeAMSI.obj : warning LNK4104: 'DllUnregisterServer' sembolünün dışarı aktarılması ÖZEL olmalıdır
+FakeAMSI.obj : warning LNK4104: 'DllRegisterServer' sembolünün dışarı aktarılması ÖZEL olmalıdır
+FakeAMSI.obj : warning LNK4104: 'DllGetClassObject' sembolünün dışarı aktarılması ÖZEL olmalıdır
+FakeAMSI.obj : warning LNK4104: 'DllCanUnloadNow' sembolünün dışarı aktarılması ÖZEL olmalıdır
+     C:\Users\bc\source\repos\Fake AMSI\x64\Release\Fake AMSI.lib kitaplığı ve C:\Users\bc\source\repos\Fake AMSI\x64\Release\Fake AMSI.exp nesnesi oluşturuluyor
+  Kod üretiliyor
+  Kodun üretilmesi tamamlandı
+  Fake AMSI.vcxproj -> C:\Users\bc\source\repos\Fake AMSI\x64\Release\Fake AMSI.dll
