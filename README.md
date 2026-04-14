@@ -1,3 +1,5 @@
+<img width="1024" height="682" alt="image" src="https://github.com/user-attachments/assets/8b1d8672-b92c-4344-b6e5-dbc49b11685b" />
+
 # 🧬 Khaelita AMSI & DLL Hijacking Research
 
 A step-by-step technical analysis of **DLL Hijacking** mechanisms and their limitations within the **Windows AMSI (Antimalware Scan Interface)** environment. This project documents why a vulnerability may fail in hardened systems and how this "failure" provides deep insights into operating system architecture.
@@ -16,6 +18,8 @@ A step-by-step technical analysis of **DLL Hijacking** mechanisms and their limi
 
 ### Adım 2: Diagnosis & Deep Analysis (Why did it fail?)
 To understand why the OS ignored the local DLL, **Process Monitor (ProcMon)** was used to capture the "behind-the-scenes" file system activity.
+
+<img width="704" height="144" alt="image" src="https://github.com/user-attachments/assets/d5a5199a-4a8e-405c-b920-0f16b97c256e" />
 
 * **Observation:** ProcMon traces revealed that PowerShell did not even attempt to look for `amsi.dll` in the local directory.
 * **Technical Finding:** The analysis confirmed that `powershell.exe` uses a **Hardcoded/Absolute Path** to load the library directly from **`C:\Windows\System32\amsi.dll`**. Furthermore, the process utilizes security flags during `LoadLibraryEx` calls that explicitly disable the local directory for critical security components.
